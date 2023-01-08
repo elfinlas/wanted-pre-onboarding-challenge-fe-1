@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# 2023. 01 원티드 프리온보딩 챌린지 프론트엔드 코스 사전 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+23년 1월 진행하는 원티드 프리온보딩 프론트 사전과제 결과물
+[사전과제 설명](https://github.com/starkoora/wanted-pre-onboarding-challenge-fe-1-api#updateTodo) 참고
+[원티드 프리온보딩 게시글](https://www.wanted.co.kr/events/pre_challenge_fe_5) 참고
 
-## Available Scripts
+## 사용 라이브러리 및 프레임워크
 
-In the project directory, you can run:
+-   React
+-   Next.Js
+-   Axios
+-   Daisyui
+-   Sweetalert2
+-   React-spinners
+-   Zustand
+-   Tailwindcss
 
-### `yarn start`
+## 진행 내용
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Assignment 1 - Login / SignUp
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-   /auth 경로에 로그인 / 회원가입 기능을 개발합니다
 
-### `yarn test`
+    -   로그인, 회원가입을 별도의 경로로 분리해도 무방합니다
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    *   [x] 최소한 이메일, 비밀번호 input, 제출 button을 갖도록 구성해주세요
 
-### `yarn build`
+    -   이메일과 비밀번호의 유효성을 확인합니다
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    *   [x] 이메일 조건 : 최소 @, . 포함
+    *   [x] 비밀번호 조건 : 8자 이상 입력
+    *   [x] 이메일과 비밀번호가 모두 입력되어 있고, 조건을 만족해야 제출 버튼이 활성화 되도록 해주세요
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    -   로그인 API를 호출하고, 올바른 응답을 받았을 때 루트 경로로 이동시켜주세요
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    *   [x] 응답으로 받은 토큰은 로컬 스토리지에 저장해주세요
+    *   [x] 다음 번에 로그인 시 토큰이 존재한다면 루트 경로로 리다이렉트 시켜주세요
+    *   [x] 어떤 경우든 토큰이 유효하지 않다면 사용자에게 알리고 로그인 페이지로 리다이렉트 시켜주세요
 
-### `yarn eject`
+### Assignment 2 - Todo List
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   Todo List API를 호출하여 Todo List CRUD 기능을 구현해주세요
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    -   [x] 목록 / 상세 영역으로 나누어 구현해주세요
+    -   [x] Todo 목록을 볼 수 있습니다.
+    -   [x] Todo 추가 버튼을 클릭하면 할 일이 추가 됩니다.
+    -   [x] Todo 수정 버튼을 클릭하면 수정 모드를 활성화하고, 수정 내용을 제출하거나 취소할 수 있습니다.
+    -   [x] Todo 삭제 버튼을 클릭하면 해당 Todo를 삭제할 수 있습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   한 화면 내에서 Todo List와 개별 Todo의 상세를 확인할 수 있도록 해주세요.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    -   [x] 새로고침을 했을 때 현재 상태가 유지되어야 합니다.
+    -   [x] 개별 Todo를 조회 순서에 따라 페이지 뒤로가기를 통하여 조회할 수 있도록 해주세요.
 
-## Learn More
+-   한 페이지 내에서 새로고침 없이 데이터가 정합성을 갖추도록 구현해주세요
+    -   [x] 수정되는 Todo의 내용이 목록에서도 실시간으로 반영되어야 합니다
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 실행 방법
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+먼저 사전과제 페이지의 백엔드 서버를 구동이 되어 있다는 전제하에 진행합니다.
+백엔드 서버의 포트는 8081로 진행하여, 각 소스에 하드코딩으로 되어 있습니다. (미흡점 및 개선 포인트 참고)
 
-### Code Splitting
+> git clone https://github.com/elfinlas/wanted-pre-onboarding-challenge-fe-1
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+클론을 적당한 곳에 받은 후 패키지를 내려받습니다.
 
-### Analyzing the Bundle Size
+```
+yarn install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+이후 개발용으로 실행하여 테스트 합니다.
 
-### Making a Progressive Web App
+```
+yarn dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+백엔드 측 api 주소는 [사전과제 설명](https://github.com/starkoora/wanted-pre-onboarding-challenge-fe-1-api#updateTodo) 을 참고해주세요.
 
-### Advanced Configuration
+## 미흡점 및 개선 포인트
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   환경변수 설정을 진행하지 않아서 일부 설정(서버 Url 등)의 경우 하드 코딩이 되어 있습니다.
+    -   향후 .env 등에 넣어서 작업 처리 필요
+-   토큰 등 주요 정보가 LocalStorage에 저장되는 부분
+    -   이 부분은 쿠키를 사용하되 https, httponly 등을 통해서 미들웨어 영역에서 핸들링하여, 인증 및 필요 데이터만 랜더링으로 넘기는 방식으로 구현 필요
+-   UI 개선
+    -   과제 테스트 타입이라 UI 및 UX가 미흡합니다.
+-   접근 제어
+    -   로그인 또는 로그아웃 시 권한이 필요한 페이지 이동 시 먼저 랜더링 후 이동하는 문제가 있습니다.
+    -   이는 랜더링 이전 서버 사이드에서 처리 후 이동 처리가 필요합니다.
