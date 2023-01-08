@@ -1,7 +1,7 @@
 # 2023. 01 원티드 프리온보딩 챌린지 프론트엔드 코스 사전 과제
 
-23년 1월 진행하는 원티드 프리온보딩 프론트 사전과제 결과물
-[사전과제 설명](https://github.com/starkoora/wanted-pre-onboarding-challenge-fe-1-api#updateTodo) 참고
+23년 1월 진행하는 원티드 프리온보딩 프론트 사전과제 결과물  
+[사전과제 설명](https://github.com/starkoora/wanted-pre-onboarding-challenge-fe-1-api#updateTodo) 참고  
 [원티드 프리온보딩 게시글](https://www.wanted.co.kr/events/pre_challenge_fe_5) 참고
 
 ## 사용 라이브러리 및 프레임워크
@@ -57,7 +57,7 @@
 
 ## 실행 방법
 
-먼저 사전과제 페이지의 백엔드 서버를 구동이 되어 있다는 전제하에 진행합니다.
+먼저 사전과제 페이지의 백엔드 서버를 구동이 되어 있다는 전제하에 진행합니다.  
 백엔드 서버의 포트는 8081로 진행하여, 각 소스에 하드코딩으로 되어 있습니다. (미흡점 및 개선 포인트 참고)
 
 > git clone https://github.com/elfinlas/wanted-pre-onboarding-challenge-fe-1
